@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .up-div{
+            display: flex;
+        }
+
+        .down-div{
+            display: flex;
+        }
+
+        .div1 {
+            height: 150px;
+            width: 200px;
+        }
+
+        .div2 {
+            height: 150px;
+            width: 200px;
+        }
+
+        .div3 {
+            height: 150px;
+            width: 200px;
+        }
+
+        .div4 {
+            height: 150px;
+            width: 200px;
+        }
+
+        .anti{
+            height: 150px;
+        }
+
+        .clock{
+            height: 150px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <div class="up-div">
+            <div class="div1" id="div1" style="background-color: red;">1</div>
+            <div class="div2" id="div2" style="background-color: yellow;">2</div>
+        </div>
+        <button class="anti" id="anti" onclick="runAnti()">Anti-clockwise</button>
+        <button class="clock" id="clock" onclick="runClock()">Clockwise</button>
+        <div class="down-div">
+            <div class="div3" id="div3" style="background-color: orange;">3</div>
+            <div class="div4" id="div4" style="background-color: green;">4</div>
+        </div>
+    </div>
+
+    <script>
+        function runClock(){
+            let div1 = document.getElementById('div1').style.backgroundColor
+            let div2 = document.getElementById('div2').style.backgroundColor
+            let div3 = document.getElementById('div3').style.backgroundColor
+            let div4 = document.getElementById('div4').style.backgroundColor
+            
+            document.getElementById('div1').style.backgroundColor = div4
+            document.getElementById('div2').style.backgroundColor = div1
+            document.getElementById('div3').style.backgroundColor = div2
+            document.getElementById('div4').style.backgroundColor = div3
+        }
+
+        function runAnti(){
+            let div1 = document.getElementById('div1').style.backgroundColor
+            let div2 = document.getElementById('div2').style.backgroundColor
+            let div3 = document.getElementById('div3').style.backgroundColor
+            let div4 = document.getElementById('div4').style.backgroundColor
+            
+            document.getElementById('div1').style.backgroundColor = div2
+            document.getElementById('div2').style.backgroundColor = div3
+            document.getElementById('div3').style.backgroundColor = div4
+            document.getElementById('div4').style.backgroundColor = div1
+        }
+    </script>
+</body>
+
+</html>
